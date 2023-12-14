@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <link rel="stylesheet" href="style.css" />
-  <body>
-    <script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <title>Registro di Classe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <h1>Registro di Classe</h1>
+
+    <div>
+      <h2>Nuovo Registro</h2>
+      <label for="materia">Nome della Materia:</label>
+      <input type="text" id="materia">
+      <button onclick="creaNuovoRegistro()">Crea Registro</button>
+    </div>
+
+    <div>
+      <h2>Aggiunta di Studenti</h2>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome">
+      <label for="cognome">Cognome:</label>
+      <input type="text" id="cognome">
+      <label for="email">Email:</label>
+      <input type="email" id="email">
+      <label for="telefono">Numero di Telefono:</label>
+      <input type="tel" id="telefono">
+      <button onclick="aggiungiStudente()">Aggiungi Studente</button>
+    </div>
+
+    <div>
+      <h2>Gestione degli Studenti</h2>
+      <label for="studenti">Seleziona uno studente:</label>
+      <select id="studenti" onchange="selezionaStudente()">
+        <!-- Opzioni degli studenti saranno aggiunte dinamicamente -->
+      </select>
+      <button onclick="eliminaStudente()">Elimina Studente</button>
+
+      <h3>Modifica Informazioni</h3>
+      <label for="modifica-nome">Nome:</label>
+      <input type="text" id="modifica-nome">
+      <label for="modifica-cognome">Cognome:</label>
+      <input type="text" id="modifica-cognome">
+      <label for="modifica-email">Email:</label>
+      <input type="email" id="modifica-email">
+      <label for="modifica-telefono">Numero di Telefono:</label>
+      <input type="tel" id="modifica-telefono">
+      <button onclick="modificaStudente()">Modifica Studente</button>
+    </div>
+
+    <div>
+      <h2>Visualizzazione del Totale degli Studenti</h2>
+      <p>Totale Studenti: <span id="totaleStudenti">0</span></p>
+      <table id="tabellaStudenti">
+        <!-- Contenuto della tabella sarà aggiunto dinamicamente -->
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js">
+  </script>
+</body>
 </html>
